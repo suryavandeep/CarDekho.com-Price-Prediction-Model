@@ -26,7 +26,7 @@ def predict():
         if(Fuel_Type=='Petrol'):
                 Fuel_Type_Petrol=1
                 Fuel_Type_Diesel=0
-        elif (Fuel_Type=='Diesel'):
+        elif(Fuel_Type=='Diesel'):
             Fuel_Type_Petrol=0
             Fuel_Type_Diesel=1
         Year=2021-Year
