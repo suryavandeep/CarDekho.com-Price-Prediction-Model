@@ -54,7 +54,6 @@ requests==2.25.1
 scikit-learn==0.24.2
 scipy==1.6.2
 seaborn==0.11.2
-setuptools==52.0.0.post20210125
 six==1.16.0
 starlette==0.14.2
 threadpoolctl==2.2.0
@@ -66,6 +65,4 @@ uvicorn==0.15.0
 wcwidth==0.2.5
 Werkzeug==1.0.1
 wheel==0.37.0
-win-inet-pton==1.1.0
-wincertstore==0.2
 zipp==3.5.0
