@@ -44,9 +44,9 @@ def predict():
         #prediction=model.predict([[20,30000,1,2,0,1,0,0]])
         output=round(prediction[0],2)
         if output<0:
-            return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
+            return render_template('index.html',prediction_texts="Sorry, you have entered Invalid Input")
         else:
-            return render_template('index.html',prediction_text="You Can Sell The Car at {}".format(output))
+            return render_template('index.html',prediction_text="Predicted Selling Price for this car(in Lakhs) is : {}".format(output))
     else:
         return render_template('index.html')
 
