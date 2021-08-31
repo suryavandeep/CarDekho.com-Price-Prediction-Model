@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +8,27 @@
 
 <body>
 
-    <div style="color:blue">
+    <div style="color:rgb(173, 173, 173)">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
-            <h3>Year</h3>
+            <h1>Car Selling Price Prediction App</h1>
+            <br>
+            <h3>What is your Car model year?</h3>
             <input id="first" name="Year" type="number ">
-            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type" id="fuel" required="required">
+            <h3>What is the actual showroom price of your Car model(In lakhs)?</h3><br><input id="second" name="Present_Price" required="required">
+            <h3>How many Kilometers Driven?</h3><input id="third" name="Kms_Driven" required="required">
+            <h3>How many owners previously had this car (0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
+            <h3>What is the Fuel-type?</h3><br><select name="Fuel_Type" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="CNG">CNG</option>
             </select>
-            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+            <h3>Are you a Dealer or Individual?</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
             </select>
-            <h3>Transmission type</h3><br><select name="Transmission_Manual" id="research" required="required">
-                <option value="Manual">Manual Car</option>
-                <option value="Automatic">Automatic Car</option>
+            <h3>Transmission type?</h3><br><select name="Transmission_Manual" id="research" required="required">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
             </select>
             <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
             <br>
@@ -40,15 +40,26 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><h2 id='predict_text'>{{ prediction_text }}<h2>
     </div>
-
+    <br>
+    <footer id='footer-style'>
+        <p>Deployed by : Deepak Soni</p>
+        <a id='footer-style' href="mailto:rudrarevolutionbegins777@gmail.com">Contact Us</a>
+    </footer>
 
 
 
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+        html
+        {
+            height: 100%;
+        }
         body {
-            background-color: lightslategray;
+            font-family: "Montserrat", sans-serif;
+            background-image: linear-gradient(to bottom right,#000428 , #004e92);
             text-align: center;
             padding: 0px;
         }
@@ -79,43 +90,43 @@
         }
         
         #fuel {
-            width: 83px;
-            height: 43px;
+            width: auto;
+            height: 45px;
             text-align: center;
             border-radius: 14px;
             font-size: 20px;
         }
         
         #fuel:hover {
-            background-color: coral;
+            background-color: rgb(224, 224, 196);
         }
         
         #research {
-            width: 99px;
-            height: 43px;
+            width: auto;
+            height: 45px;
             text-align: center;
             border-radius: 14px;
-            font-size: 18px;
+            font-size: 20px;
         }
         
         #research:hover {
-            background-color: coral;
+            background-color: rgb(224, 224, 196);
         }
         
         #resea {
-            width: 99px;
-            height: 43px;
+            width: auto;
+            height: 45px;
             text-align: center;
             border-radius: 14px;
-            font-size: 18px;
+            font-size: 20px;
         }
         
         #resea:hover {
-            background-color: coral;
+            background-color: rgb(224, 224, 196);
         }
         
         #sub {
-            width: 120px;
+            width: auto;
             height: 43px;
             text-align: center;
             border-radius: 14px;
@@ -123,7 +134,7 @@
         }
         
         #sub:hover {
-            background-color: darkcyan;
+            background-color:rgb(135, 217, 228);
         }
         
         #first {
@@ -152,6 +163,17 @@
             height: 25px;
             font-size: 20px;
             text-align: center;
+        }
+        
+        #predict_text
+        {
+            color:rgb(175, 230, 230);
+        }
+
+        #footer-style
+        {
+            color:rgb(219, 234, 236);
+            font-size: 10px;
         }
     </style>
 </body>
